@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+
+  root to: 'appointmentreminder#index'
   get 'appointmentreminder/index'
-  post 'appointmentreminder/makecall'
+  get 'appointmentreminder/makecall'
   get 'appointmentreminder/reminder'
   get 'appointmentreminder/directions'
   get 'appointmentreminder/goodbye'
+  get 'appointmentreminder/list'
+  get 'appointmentreminder/ok'
+  get 'appointmentreminder/order'
+
+
+  post 'appointmentreminder/index'
+  post 'appointmentreminder/makecall'
+  post 'appointmentreminder/reminder'
+  post 'appointmentreminder/directions'
+  post 'appointmentreminder/goodbye'
+  post 'appointmentreminder/list'
+  post 'appointmentreminder/ok'
+  post 'appointmentreminder/order'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

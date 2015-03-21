@@ -1,0 +1,17 @@
+%h1 Ctrip Phobot Demo
+%h2{ style: "color: #ff0000"}
+  = params['msg']
+%h3
+  Enter your phone number to booking the hotel
+%h4 
+  from Wed 25 to Fri 27 
+
+- if true
+  = form_for Order.new, url: "/appointmentreminder/makecall" do |f|
+    = f.text_field :phone, placeholder: "Your Phone number"
+
+    = f.select :hotel_id, options_for_select(Hotel.all.map{|h| [h.name, h.id]}),{},{class: 'chosen'}
+
+    = f.submit 'Create order', class: "btn btn-create ci_branch-submit"
+
+  

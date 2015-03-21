@@ -1,0 +1,16 @@
+%table.gridtable
+  %tr
+    %th phone
+    %th hotel
+    %th status
+    %th created_at
+  - @orders.each do |order|
+    %tr.logs-data
+      %td
+        = order.phone
+      %td
+        = order.hotel.name
+      %td
+        = order.status
+      %td
+        = order.created_at
